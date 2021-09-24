@@ -1,7 +1,7 @@
 <?php
 
-require_once 'C:\Users\HP\PhpstormProjects\untitled8\OOP Part\Zoo\LandMammals\BaseLandMammal.php';
-require_once 'C:\Users\HP\PhpstormProjects\untitled8\OOP Part\Zoo\LandMammals\CatFamily\CatFamilyInterface.php';
+require_once realpath(dirname(__FILE__) . '/..') . '/BaseLandMammal.php';
+require_once realpath(dirname(__FILE__) . '/..').'/CatFamily/CatFamilyInterface.php';
 
 class Cat extends BaseLandMammal implements CatFamilyInterface
 {

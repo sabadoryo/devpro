@@ -17,4 +17,8 @@ class Fish extends BaseAnimal implements MarineMammal
         return 'grey';
     }
 
+    public function name()
+    {
+        // TODO: Implement name() method.
+    }
 }

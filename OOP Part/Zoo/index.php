@@ -10,7 +10,7 @@ $lion = new Lion('Mufasa');
 $lion->setPower(100000);
 $lion1 = new Lion('Leo');
 
-$conquest = new Conquest($lion1,$lion);
+$conquest = new Conquest($lion1,$cat);
 
 $conquest->battle();
 

@@ -17,4 +17,8 @@ class Shark extends BaseAnimal implements MarineMammal
         return 'blue';
     }
 
+    public function name()
+    {
+        // TODO: Implement name() method.
+    }
 }
