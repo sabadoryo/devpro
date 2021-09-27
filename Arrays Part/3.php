@@ -1,12 +1,15 @@
 <?php
 
+$sum = 0;
 
-function sumOfArray($array,$sum = 0): int
+function sumOfArray($array): int
 {
-    if ($array[0]) { // I wanted to avoid using is_array because it is built in function:) There are plenty of warnings but still works
+    global $sum;
+
+    if (is_array($array)) {
         foreach ($array as $item) {
-            if ($item[0]) {
-                return sumOfArray($item, $sum);
+            if (is_array($item)) {
+                sumOfArray($item);
             } else {
                 $sum += $item;
             }
@@ -16,6 +19,6 @@ function sumOfArray($array,$sum = 0): int
     return $sum;
 }
 
-$result = sumOfArray([1,2,3,[4,5,6,[7,8,9]]]);
+$result = sumOfArray([[1,2,[1]], 1, 2, 3, [4, 5, 6, [7, 8, 9]]]);
 
 echo "\nResult is $result\n";

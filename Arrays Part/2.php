@@ -29,7 +29,7 @@ the sewers to the Penobscot River and out to sea as the rain clouds break overhe
 $collection = countWordsInText($text);
 
 // uncomment line below to test
-//echo $collection["after"];
+print_r(countWordsInText($text));
 
 
 function countWordsInText($text): array

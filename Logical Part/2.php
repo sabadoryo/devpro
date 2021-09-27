@@ -2,9 +2,9 @@
 
 $tickets = ['003300', '123321', '246660', '123100', '333330', '111300'];
 
-echo getLuckyTickets($tickets);
+print_r(getLuckyTickets($tickets));
 
-function getLuckyTickets($tickets): string
+function getLuckyTickets($tickets): array
 {
     $luckyTickets = [];
 
@@ -19,5 +19,5 @@ function getLuckyTickets($tickets): string
         }
     }
 
-    return implode(' ', $luckyTickets);
+    return $luckyTickets;
 }

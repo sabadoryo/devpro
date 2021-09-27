@@ -1,7 +1,9 @@
 <?php
 
-$examplePerfectRow = ":):(;);(";
+$examplePerfectRow = ":)(((:(;);(";
 $exampleWrongRow = ":):);):((((:(";
+
+$randomRow = "Hello))) World(, test string(((((";
 
 $row = $exampleWrongRow; //change here to test
 
