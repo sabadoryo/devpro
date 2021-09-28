@@ -1,14 +1,20 @@
 <?php
 
-$tickets = ['003300', '123321', '246660', '123100', '333330', '111300'];
+print_r(getLuckyTickets());
 
-print_r(getLuckyTickets($tickets));
-
-function getLuckyTickets($tickets): array
+function getLuckyTickets(): array
 {
     $luckyTickets = [];
+    $value = 0;
 
-    foreach ($tickets as $ticket) {
+    while ($value < 999999) {
+
+        if ($value < 99999) {
+            $ticket = getFormatted($value);
+        } else {
+            $ticket = $value;
+        }
+
         $nums = array_chunk(str_split($ticket), 3);
 
         $firstHalfSum = array_sum($nums[0]);
@@ -17,7 +23,14 @@ function getLuckyTickets($tickets): array
         if ($firstHalfSum == $secondHalfSum) {
             $luckyTickets[] = $ticket;
         }
+        $value++;
     }
 
     return $luckyTickets;
+}
+
+
+function getFormatted($value): string
+{
+    return str_pad($value, 6, 0, STR_PAD_LEFT);
 }
