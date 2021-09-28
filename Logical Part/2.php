@@ -8,7 +8,6 @@ function getLuckyTickets(): array
     $value = 0;
 
     while ($value < 999999) {
-
         if ($value < 99999) {
             $ticket = getFormatted($value);
         } else {
@@ -29,8 +28,8 @@ function getLuckyTickets(): array
     return $luckyTickets;
 }
 
-
 function getFormatted($value): string
 {
     return str_pad($value, 6, 0, STR_PAD_LEFT);
 }
+
